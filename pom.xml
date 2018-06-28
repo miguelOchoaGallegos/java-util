@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>pe.com.profuturo.ffpp.utilitario</groupId>
+  <artifactId>profuturo-ffpp-utilitario</artifactId>
+  <version>0.1</version>
+  <packaging>pom</packaging>
+  <name>profuturo-ffpp-utilitario</name>
+  <description>demo para integracion con WAS</description>
+  <modules>
+  	<module>profuturo-ffpp-utilitario-ear</module>
+  	<module>profuturo-ffpp-utilitario-war</module>  	  	
+  </modules>
+  
+  	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.0.RELEASE</version>
+		<relativePath/>
+	</parent>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<fork>true</fork>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>	
+	
+	
+</project>

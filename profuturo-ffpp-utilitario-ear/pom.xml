@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>pe.com.profuturo.ffpp.utilitario</groupId>
+		<artifactId>profuturo-ffpp-utilitario</artifactId>
+		<version>0.1</version>
+	</parent>
+	<artifactId>profuturo-ffpp-utilitario-ear</artifactId>
+	<packaging>ear</packaging>
+	<name>profuturo-ffpp-utilitario-ear</name>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.10.1</version>
+				<configuration>
+					<finalName>profuturo-ffpp-utilitario-ear</finalName>
+					<version>6</version>
+					<modules>
+						<webModule>
+							<groupId>pe.com.profuturo.ffpp.utilitario</groupId>
+							<artifactId>profuturo-ffpp-utilitario-war</artifactId>
+							<contextRoot>/profuturo-ffpp-utilitario</contextRoot>
+						</webModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>	
+	<dependencies>
+		<dependency>
+			<groupId>pe.com.profuturo.ffpp.utilitario</groupId>
+			<artifactId>profuturo-ffpp-utilitario-war</artifactId>
+			<version>0.1</version>
+			<type>war</type>
+		</dependency>
+	</dependencies>
+</project>
